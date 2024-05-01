@@ -9,29 +9,79 @@
 <body>
     <header>
         <h1>Мое портфолио</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me">Обо мне</a></li>
+                <li><a href="#why-choose-me">Почему выбрать меня</a></li>
+                <li><a href="#my-skills">Мои навыки</a></li>
+                <li><a href="#my-achievements">Мои достижения</a></li>
+                <li><a href="#contact-links">Ссылки на контакты</a></li>
+                <li><a href="#my-projects">Мои проекты</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="about">
-        <h2>Обо мне</h2>
-        <p>Привет! Меня зовут Иван Иванов. Я занимаюсь веб-разработкой уже более 5 лет. Мой стек технологий включает HTML, CSS, JavaScript, а также различные фреймворки и библиотеки.</p>
-    </section>
-    <section id="projects">
-        <h2>Мои проекты</h2>
-        <div class="project">
-            <h3>Проект 1</h3>
-            <p>Краткое описание проекта 1.</p>
+    <div class="grid-container">
+        <div class="card about-me">
+            <h2 id="about-me">Обо мне</h2>
+            <p>Привет! Меня зовут Иван Иванов. Я занимаюсь веб-разработкой уже более 5 лет. Мой стек технологий включает HTML, CSS, JavaScript, а также различные фреймворки и библиотеки. В свободное время я люблю изучать новые технологии и улучшать свои навыки.</p>
         </div>
-        <div class="project">
-            <h3>Проект 2</h3>
-            <p>Краткое описание проекта 2.</p>
+        <div class="card why-choose-me">
+            <h2 id="why-choose-me">Почему выбрать меня</h2>
+            <p>Я обладаю большим опытом в веб-разработке и стремлюсь к качественным результатам. Мои проекты отличаются креативным дизайном и высокой производительностью.</p>
         </div>
-        <!-- Добавьте больше проектов по аналогии -->
-    </section>
-    <section id="contact">
-        <h2>Связаться со мной</h2>
-        <p>Вы можете связаться со мной по электронной почте: example@example.com</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Мое портфолио</p>
-    </footer>
+        <div class="card my-skills">
+            <h2 id="my-skills">Мои навыки</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <!-- Добавьте свои навыки -->
+            </ul>
+        </div>
+        <div class="card my-achievements">
+            <h2 id="my-achievements">Мои достижения</h2>
+            <p>Здесь вы можете описать свои достижения в сфере веб-разработки или других областях.</p>
+        </div>
+        <div class="card contact-links">
+            <h2 id="contact-links">Ссылки на контакты</h2>
+            <p>Вы можете связаться со мной по электронной почте: <a href="mailto:example@example.com">example@example.com</a></p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <!-- Добавьте другие ссылки на соцсети, если у вас есть -->
+            </div>
+        </div>
+        <div class="card my-projects-wide">
+            <h2 id="my-projects" class="my-projects-title">Мои проекты</h2>
+            <div class="my-projects-grid">
+                <div class="project">
+                    <img src="project1.png" alt="Проект 1">
+                    <div class="project-details">
+                        <h3>Проект 1</h3>
+                        <p>Краткое описание проекта 1.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project1.png" alt="Проект 2">
+                    <div class="project-details">
+                        <h3>Проект 2</h3>
+                        <p>Краткое описание проекта 2.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project1.png" alt="Проект 3">
+                    <div class="project-details">
+                        <h3>Проект 3</h3>
+                        <p>Краткое описание проекта 3.</p>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Добавьте больше проектов по аналогии -->
+        </div>
+    </div>
 </body>
 </html>

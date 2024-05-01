@@ -1,47 +1,166 @@
 /* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
 }
 
-header, footer {
+header {
     background-color: #333;
     color: #fff;
+    padding: 20px 40px;
     text-align: center;
 }
 
-section {
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Грид контейнер */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
     padding: 20px;
 }
 
-/* Стили для ПК */
-@media only screen and (min-width: 768px) {
-    header, footer {
-        padding: 20px 0;
-    }
+/* Карточки */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
-    section {
-        margin: 0 auto;
-        max-width: 800px;
-    }
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-    .project {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #fff;
-        padding: 20px;
-    }
+.card p {
+    margin-bottom: 20px;
+}
 
-    .project h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
+/* Навыки */
+.my-skills ul {
+    padding: 0;
+}
 
-    .project p {
-        margin: 0;
-    }
+.my-skills ul li {
+    list-style-type: none;
+}
+
+/* Достижения */
+.my-achievements p {
+    margin: 0;
+}
+
+/* Ссылки на контакты */
+.contact-links p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Проекты */
+.project {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+.project-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project p {
+    margin: 0;
+    margin-bottom: 25px; /* Добавляем отступ снизу */
+}
+
+
+.my-projects-wide {
+    grid-column: 1 / -1;
+    display: grid;
+    justify-items: center; /* Центрируем элементы по горизонтали */
+    grid-gap: 20px;
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.my-projects-title {
+    margin-top: 20px; /* Добавляем отступ сверху */
+}
+
+.my-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Три карточки в одной линии */
+    grid-gap: 20px;
+}
+
+
+.project a {
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #333;
+    color: #fff;
 }
