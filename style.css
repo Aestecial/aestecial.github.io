@@ -3,6 +3,25 @@
     .my-projects-grid {
         grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
     }
+
+    .project-details {
+        padding: 5px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .project p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .project a {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
 }
 
 body {
@@ -87,24 +106,50 @@ h2 {
 }
 
 /* Ссылки на контакты */
-.contact-links p {
-    margin-bottom: 10px;
+.contant_links p {
+    margin: 0;
 }
 
-.social-links a {
+#contact-elements {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    justify-content: flex-start; /* Выравниваем элементы в начале строки (слева) */
+    margin-top: -45px;
+}
+
+#contact-elements a {
     display: inline-block;
-    margin-right: 10px;
     color: #333;
     text-decoration: none;
     border: 1px solid #333;
     border-radius: 20px;
     padding: 8px 20px;
+    margin-right: 10px; /* Добавляем отступ между кнопками */
+    margin-bottom: -10px; /* Добавляем отступ снизу */
     transition: all 0.3s ease;
+    text-align: center; /* Центрируем текст в кнопке */
 }
 
-.social-links a:hover {
+#contact-elements a:hover {
     background-color: #333;
     color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-elements a {
+        margin-right: 0; /* Убираем отступ между кнопками на мобильных устройствах */
+        margin-bottom: 10px; /* Возвращаем стандартный отступ снизу на мобильных устройствах */
+        width: 100%; /* Ширина кнопки на мобильных устройствах */
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card.contact-links a {
+        margin-right: 0; /* Убираем отступ между кнопками на мобильных устройствах */
+        margin-bottom: 10px; /* Возвращаем стандартный отступ снизу на мобильных устройствах */
+        width: 100%; /* Ширина кнопки на мобильных устройствах */
+    }
 }
 
 /* Проекты */
@@ -116,8 +161,8 @@ h2 {
 }
 
 .project img {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 100%; /* Максимальная ширина изображения равна 100% ширины контейнера */
+    max-height: 100%; /* Максимальная высота изображения равна 100% высоты контейнера */
     border-radius: 10px;
 }
 
