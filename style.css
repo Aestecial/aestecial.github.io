@@ -1,4 +1,10 @@
 /* Общие стили */
+@media only screen and (max-width: 600px) {
+    .my-projects-grid {
+        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
