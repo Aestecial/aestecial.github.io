@@ -111,23 +111,23 @@ h2 {
 }
 
 #contact-elements {
-    display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
-    justify-content: flex-start; /* Выравниваем элементы в начале строки (слева) */
-    margin-top: -45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Создает сетку, которая адаптируется к размеру экрана */
+    gap: 10px; /* Добавляет пространство между кнопками */
+    padding: 10px; /* Отступ вокруг сетки */
 }
 
 #contact-elements a {
-    display: inline-block;
+    display: flex;
+    justify-content: center; /* Выравнивает текст по горизонтали */
+    align-items: center; /* Выравнивает текст по вертикали */
     color: #333;
     text-decoration: none;
     border: 1px solid #333;
     border-radius: 20px;
     padding: 8px 20px;
-    margin-right: 10px; /* Добавляем отступ между кнопками */
-    margin-bottom: -10px; /* Добавляем отступ снизу */
-    transition: all 0.3s ease;
-    text-align: center; /* Центрируем текст в кнопке */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для эффекта при наведении */
+    font-size: 1em; /* Базовый размер шрифта */
 }
 
 #contact-elements a:hover {
@@ -136,21 +136,16 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+    #contact-elements {
+        grid-template-columns: 1fr; /* Кнопки на полную ширину на более маленьких экранах */
+    }
+
     #contact-elements a {
-        margin-right: 0; /* Убираем отступ между кнопками на мобильных устройствах */
-        margin-bottom: 10px; /* Возвращаем стандартный отступ снизу на мобильных устройствах */
-        width: 100%; /* Ширина кнопки на мобильных устройствах */
+        margin-bottom: 10px; /* Обеспечивает одинаковый отступ внизу */
+        font-size: 0.8em; /* Уменьшаем размер шрифта для меньших экранов */
     }
 }
 
-
-@media only screen and (max-width: 600px) {
-    .card.contact-links a {
-        margin-right: 0; /* Убираем отступ между кнопками на мобильных устройствах */
-        margin-bottom: 10px; /* Возвращаем стандартный отступ снизу на мобильных устройствах */
-        width: 100%; /* Ширина кнопки на мобильных устройствах */
-    }
-}
 
 /* Проекты */
 .project {
@@ -209,7 +204,29 @@ h2 {
     border-radius: 20px;
     padding: 8px 20px;
     transition: all 0.3s ease;
+    font-size: 1em; /* Базовый размер шрифта */
 }
+
+/* Примерные медиа-запросы для адаптивного изменения размера */
+@media screen and (max-width: 1200px) {
+    .project a {
+        font-size: 0.8em; /* Уменьшаем размер шрифта для экранов шириной до 1200px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project a {
+        font-size: 0.7em; /* Уменьшаем размер шрифта для экранов шириной до 768px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project a {
+        font-size: 0.6em; /* Уменьшаем размер шрифта для экранов шириной до 480px */
+    }
+}
+
+/* Добавьте дополнительные медиа-запросы и значения по мере необходимости */
 
 .project a:hover {
     background-color: #333;
