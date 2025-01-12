@@ -1,0 +1,466 @@
+/* Сброс стилей  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Обычные стили */
+body {
+    font-family: "PPNeueMachina";
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../font/PPNeueMachina-Light.otf') format('opentype');
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 1.0em;
+    margin-bottom: 30px;
+}
+
+/* Стиль заголовка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F7F5EE;
+    position: sticky;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    transition: top 0.3s;
+}
+
+.menu-item a {
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #030303;
+    padding: 10px 15px;
+    transition: color 0.4s, border-bottom 0.3s;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 130px;
+    height: auto;
+}
+
+/* Навигация для ПК */
+#main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-nav ul li {
+    margin-left: 20px;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: #030303;
+    transition: color 0.4s;
+}
+
+#main-nav ul li a:hover {
+    color: #000000;
+    border-bottom: 3px solid #000;
+}
+
+/* Бургер меню для телефона */
+.burger-menu {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(204, 168, 168, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-icon {
+    display: none;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s;
+    position: absolute;
+}
+
+.burger-icon:before,
+.burger-icon:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+.burger-icon:before {
+    top: -8px;
+}
+
+.burger-icon:after {
+    top: 8px;
+}
+
+.burger-icon.open {
+    background-color: transparent;
+}
+
+.burger-icon.open:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.burger-icon.open:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Секции */
+.section {
+    width: 95vw;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+.section_about_hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    min-height: calc(400px - 160px);
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 {
+    background: #f7f5ee;
+}
+
+.section2 {
+    background: #a3dbbf;
+}
+
+.section3 {
+    background: #b6d4e0;
+}
+
+.section4 {
+    background: #ffffff;
+}
+
+.border_bottom {
+    border-bottom: 1px solid #000;
+}
+
+.section_twocolumn_5050 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 90px 3%;
+}
+
+.section_twocolumn_50 {
+    flex-basis: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.photo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.section_about_bff_img_inner {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section_about_bff_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.section_about_bff_text_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 1.0em;
+    margin-bottom: 30px;
+}
+
+#number-to-increase {
+    font-size: 200px;
+    font-weight: bold;
+    color: #0d5f1f;
+}
+
+/* Кнопка */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Эффект при наведении */
+button:hover {
+    background-color: #0056b3; /* Темно-синий фон при наведении */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+
+/* Эффект при фокусе */
+button:focus {
+    outline: none; /* Убираем стандартный фокус */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Слабое свечение вокруг кнопки */
+}
+
+/* нижний колонтитул */
+.footer_new {
+    position: relative;
+    min-height: 20vh;
+    padding-top: 0;
+    padding-bottom: 60px;
+    background: #030303;
+    color: #fff;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section_footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    min-height: calc(400px - 160px);
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #aaa;
+    position: absolute;
+    bottom: 20px; /* Позиционируем внизу */
+    width: 100%;
+    text-align: center; /* Центрируем */
+}
+
+.section_footer h1 {
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section_footer p {
+    font-size: 18px;
+    font-weight: 200;
+    color: #ccc;
+    line-height: 1.5;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.mono {
+    font-family: "Monotype Corsiva"
+}
+
+/* для маленьких телефонов */
+@media screen and (max-width: 500px) {
+    /* Секции */
+    .section_about_bff_text {
+        text-align: center;
+    }
+
+    .section_about_bff_text_inner {
+        padding: 10px;
+    }
+
+    .section_about_hero {
+        padding: 40px 5%;
+        text-align: center;
+    }
+
+    .photo_container {
+        max-height: 250px;
+    }
+
+    .section_about_bff_text {
+        margin-bottom: 20px;
+    }
+
+    .photo_container {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .logo-image {
+        width: 100px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    .section_twocolumn_5050 {
+        flex-direction: column;
+        padding: 20px 2%;
+    }
+    
+    .section_twocolumn_50 {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    #number-to-increase {
+        font-size: 150px;
+    }
+
+    /* Бургер меню */
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
+    #main-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        z-index: 20;
+        background-color: #fff;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+    }
+
+    #main-nav.open {
+        transform: translateX(0); /* Меню появляется */
+    }
+
+    #main-nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    #main-nav ul li {
+        margin: 15px 0;
+    }
+
+    #main-nav ul li a {
+        text-decoration: none;
+        color: #030303;
+        transition: color 0.4s;
+        font-weight: bold;
+    }
+
+    #main-nav ul li a:hover {
+        color: #000000;
+        border-bottom: 3px solid #000;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* нижний колонтитул */
+    .section_footer h1 {
+        font-size: 40px;
+    }
+    .section_footer p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}

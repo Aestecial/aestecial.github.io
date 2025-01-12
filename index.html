@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.avif" alt="Logo" class="logo-image">
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-icon" id="burger-icon"></div>
+        </div>
+        <nav id="main-nav" class="simple-list">
+            <div class="menu-main-nav-container">
+                <ul id="menu-main-nav" class="menu">
+                    <li class="menu-item">
+                        <a href="https://github.com/Aestecial?tab=repositories">Гитхаб</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#/" aria-current="page">Обо мне</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#/">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="full section1 border_bottom">
+        <div class="content">
+            <div class="section_about_hero">
+                <h1 class="mono">Если твой код работает, значит это хороший код</h1>
+                <p>Моя стратегия состоит из: работать усердно, заводить друзей, делать качественный продукт и читаемый код.</p>
+            </div>
+        </div>
+    </div>
+    <div class="full section2 border_bottom">
+        <div class="section_twocolumn_5050 section_about_bffs">
+            <div class="section_twocolumn_50">
+				<div class="section_about_bff_img_inner">
+                    <div class="photo_container">
+                        <img src="images/python.jpg" alt="post1">
+                    </div>
+				</div>
+			</div>
+
+            <div class="section_twocolumn_50 section_about_bff_text">
+                <div class="section_about_bff_text_inner">
+                    <h3>Python</h3>
+                    <p>Работаю на питоне очень давно, делал пару проектов, учавствовал в крупных хакатонах. Сейчас изучаю новые возможности.</p>
+                    <span id="number-to-increase">5</span>
+                    <p>лет в программировании на питоне.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full section3 border_bottom">
+        <div class="section_twocolumn_5050 section_about_bffs">
+            <div class="section_twocolumn_50 section_about_bff_text">
+                <div class="section_about_bff_text_inner">
+                    <h3>PyTest</h3>
+                    <p>мощный фреймворк для тестирования Python-кода.</p>
+                    <p>Он позволяет легко создавать и запускать тесты, поддерживает большое количество плагинов, а также имеет простую и гибкую синтаксическую структуру.</p>
+                    <p>Я использую pytest для написания модульных тестов, а также для автоматического тестирования проектов, что помогает повысить надежность и качество кода.</p>
+                    <button><a href="https://docs.pytest.org/en/stable/index.html">Посетить</a></button>
+                </div>                
+            </div>
+            <div class="section_twocolumn_50">
+				<div class="section_about_bff_img_inner">
+                    <div class="photo_container">
+                        <img src="images/post1.jpg" alt="post1">
+                    </div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="full section4 border_bottom">
+        <div class="section_twocolumn_5050 section_about_bffs">
+            <div class="section_twocolumn_50">
+				<div class="section_about_bff_img_inner">
+                    <div class="photo_container">
+                        <img src="images/post2.jpg" alt="post1">
+                    </div>
+				</div>
+			</div>
+            <div class="section_twocolumn_50 section_about_bff_text">
+                <div class="section_about_bff_text_inner">
+                    <h3>FastAPI</h3>
+                    <p>FastAPI — это современный и быстрый веб-фреймворк для создания API на Python. Он использует стандартные Python-типизированные аннотации для автоматической генерации документации и валидации данных. Этот фреймворк спроектирован для высокой производительности, что делает его одним из лучших решений для создания RESTful API.</p>
+                    <p>Я использую FastAPI для создания высокопроизводительных API для различных проектов, с автоматической генерацией документации через Swagger UI и встроенной поддержкой асинхронности для лучшей масштабируемости.</p>
+                    <button><a href="https://fastapi.qubitpi.org/tutorial/">Посетить</a></button>
+                </div>                             
+            </div>
+        </div>
+    </div>
+    <div class="footer_new">
+        <div class="content">
+            <div class="section_footer">
+                <h1 class="mono">Сегодня ты делаешь код, завтра код делает тебе деньги</h1>
+                <p class="mono">Стив Джобс</p>
+                <p class="copyright">©2025 Aestecial Github. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('burger-icon').addEventListener('click', function() {
+            this.classList.toggle('open');
+            document.getElementById('main-nav').classList.toggle('open');
+        });
+    </script>
+    <script>
+        let lastScrollTop = 0; // Начальная позиция прокрутки
+        const header = document.querySelector('.header'); // Элемент header
+        const scrollThreshold = 500; // Порог для скрытия header
+
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Если прокрутка больше порога в 50px
+            if (currentScroll >= scrollThreshold) {
+                if (currentScroll > lastScrollTop) {
+                    // Прокрутка вниз, скрываем header
+                    header.style.top = "-100px"; // Скрываем header (например, высота 100px)
+                } else {
+                    // Прокрутка вверх, показываем header
+                    header.style.top = "0"; // Показываем header
+                }
+            } else {
+                // Если прокрутка меньше 50px, всегда показываем header
+                header.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Чтобы не было отрицательных значений
+        }, false);
+    </script>
+</body>
+</html>
