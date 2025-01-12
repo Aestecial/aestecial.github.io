@@ -7,14 +7,10 @@
 
 /* Обычные стили */
 body {
-    font-family: "PPNeueMachina";
-    margin: 0;
-}
-
-@font-face {
-    font-family: 'PPNeueMachina';
-    src: url('../font/PPNeueMachina-Light.otf') format('opentype');
+    font-family: "Neucha", serif;
     font-weight: 400;
+    font-style: normal;
+    margin: 0;
 }
 
 h1 {
@@ -325,7 +321,7 @@ button:focus {
 }
 
 .mono {
-    font-family: "Monotype Corsiva"
+    font-family: 'Pacifico', sans-serif;
 }
 
 /* для маленьких телефонов */
