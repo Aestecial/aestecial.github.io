@@ -1,0 +1,89 @@
+/* Стили секций */
+.section1 {
+    background: #f7f5ee;
+}
+
+.section2 {
+    background: #a3dbbf;
+}
+
+.section3 {
+    background: #b6d4e0;
+}
+
+.section4 {
+    background: #ffffff;
+}
+
+.border_bottom {
+    border-bottom: 1px solid #000;
+}
+
+.section_about_hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    min-height: calc(400px - 160px);
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для блоков с изображениями и текстом */
+.section_twocolumn_5050 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 90px 3%;
+}
+
+.section_twocolumn_50 {
+    flex-basis: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.photo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.section_about_bff_img_inner {
+    display: flex;
+    justify-content: center;
+}
+
+.section_about_bff_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.section_about_bff_text_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+/* Специфические медиа-запросы */
+@media screen and (max-width: 500px) {
+    .section_twocolumn_5050 {
+        flex-direction: column;
+        padding: 20px 2%;
+    }
+}

@@ -1,0 +1,144 @@
+/* Заголовки */
+.mono {
+    font-family: 'Pacifico', cursive;
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section5 {
+    background: url('https://geo.uoregon.edu/sites/default/files/bg-green-2.png') center / cover;
+}
+
+/* Разделы с контактами */
+.section_twocolumn_2525 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 90px 3%;
+}
+
+/* Каждый элемент с контактами */
+.section_twocolumn_25 {
+    flex-basis: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Карточка участника команды */
+.team-member {
+    background: linear-gradient(90deg, rgba(38, 148, 10, 0.534), rgba(0, 255, 55, 0.5));
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* Эффект при наведении на карточку */
+.team-member:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    background-color: #f9f9f9;
+}
+
+/* Анимация фона */
+.team-member:before {
+    content: '';
+    background: url('https://i.pinimg.com/originals/23/13/d8/2313d81ef95def627d0b98c554fd1791.jpg') no-repeat center center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(2px);
+    opacity: 0.4;
+}
+
+/* Изображения */
+.team-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Эффект увеличения изображения при наведении */
+.team-img:hover {
+    transform: scale(1.1);
+}
+
+/* Заголовок имени */
+.team-member h3 {
+    font-size: 1.8rem;
+    color: #f5f5dc;
+    margin-bottom: 10px;
+}
+
+/* Текст и стек технологий */
+.team-member p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.profile-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #f5f5dc;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.profile-link:hover {
+    color: #f5f5dc83;
+    text-decoration: underline;
+}
+
+/* Стили для маленьких экранов */
+@media screen and (max-width: 500px) {
+    .section_twocolumn_2525 {
+        flex-direction: column;
+        padding: 20px 2%;
+    }
+
+    .section_twocolumn_25 {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    .team-member {
+        padding: 20px;
+    }
+
+    .team-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-member h3 {
+        font-size: 1.5rem;
+    }
+
+    .team-member p {
+        font-size: 0.9rem;
+    }
+
+    .profile-link {
+        font-size: 1rem;
+    }
+}
