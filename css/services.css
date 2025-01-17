@@ -36,13 +36,11 @@
 .service-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .service-content {
-    flex: 1;
     margin-right: 20px;
 }
 
@@ -59,10 +57,7 @@
 }
 
 .service-image {
-    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .service-img {
