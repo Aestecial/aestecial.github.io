@@ -261,14 +261,13 @@ button a {
 
 /* Эффект при наведении */
 button:hover {
-    background-color: #0056b3; /* Темно-синий фон при наведении */
-    transform: scale(1.05); /* Легкое увеличение кнопки */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Эффект при фокусе */
 button:focus {
-    outline: none; /* Убираем стандартный фокус */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Слабое свечение вокруг кнопки */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* нижний колонтитул */
