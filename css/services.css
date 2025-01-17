@@ -12,7 +12,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 0 15px;
-    margin-bottom: 30px; /* Добавил отступ снизу для лучшего вида */
+    margin-bottom: 30px;
 }
 
 .service-item {
@@ -27,7 +27,72 @@
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(0, 0, 0, 0.25);
 }
 
-@media screen and (max-width: 500px) {
+/* Для контакта */
+.full.section_contact {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.service-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.service-content h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555;
+}
+
+
+@media screen and (max-width: 1000px) {
     .section_twocolumn_333 {
         flex-direction: column;
         padding: 20px;
@@ -37,4 +102,8 @@
         flex-basis: 100%;
         padding: 10px;
     }
+
+    .service-section {
+        display: contents;
+    }    
 }
