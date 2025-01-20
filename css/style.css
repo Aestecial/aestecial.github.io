@@ -229,6 +229,7 @@ h3 {
 }
 
 p {
+    text-align: left;
     font-size: 25px;
     font-weight: 200;
     line-height: 1.0em;
